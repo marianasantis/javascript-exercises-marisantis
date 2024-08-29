@@ -11,12 +11,20 @@ fibonacci(4); // returns the 4th member of the series: 3  (1, 1, 2, 3)
 fibonacci(6); // returns 8
 ```
 
-MY PSEUDOCODE
-1 1 2 3 5
-myArray = [0,1]
-i = 3 (starts at third iteration)
-loop until i <= member
-sum = sum the 2 last array members
-put sum in array
-return myArray[i]
-i++
+1 1 2 3 5 8 
+
+let atual = 1; let prev = 1 / i < f-1
+
+res = atual + prev
+prev = atual
+atual = res
+
+let current = 1;
+let prev = 1;
+let result = 0;
+
+for (i = 1; i < f-1; i++) {
+  result = current + prev;
+  prev = current;
+  current = result;
+}

@@ -1,12 +1,21 @@
-const fibonacci = function(member) {
-  if (member < 0 ) return 'OOPS';
-  const myArray = [0,1];
-  for (i = 2; i <= member; i++) {
-    let sum = myArray[myArray.length - 1] + myArray[myArray.length - 2];
-    myArray.push(sum);
+const fibonacci = function(input) {
+  let f = Number(input);
+
+  if (f < 0) return "OOPS"
+  if (f === 0) return 0
+
+  let current = 1;
+  let prev = 1;
+  let result = 1;
+  
+  for (i = 1; i < f-1; i++) {
+    result = current + prev;
+    prev = current;
+    current = result;
   }
-  return myArray[member];
+  return result;
 };
 
+fibonacci("teste");
 // Do not edit below this line
 module.exports = fibonacci;
